@@ -6,8 +6,8 @@ Containerised streamlit instances, for easy docker run deployment with port conf
 
 
 Docker Run - 
-<div style="padding-left:10%;">
-
+<div style="padding-left: 10%;">
+   
 docker run -d \
    -p 80:80 \
    -e PORT=80 \
