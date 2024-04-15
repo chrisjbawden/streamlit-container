@@ -1,8 +1,8 @@
-Description:
+<b>Description:</b>
 
 Containerised streamlit instances, for easy docker run deployment with port configurations. 
 
-Deploy:
+<b>Deploy:</b>
 
 
 Docker Run - 
@@ -19,6 +19,5 @@ Note: modify the app.py in the /app directory with your app, but its important t
 
 ------
 
-Development - 
-
+<b>Development -</b>
 sudo docker build . -t streamlit-container -f ./Dockerfile
