@@ -17,7 +17,14 @@ docker run -d \
 
 Note: modify the app.py in the /app directory with your app, but its important to keep the name "app.py"
 
+
+
+
+
+<br>
+<br>
 ------
 
 <b>Development -</b>
+
 sudo docker build . -t streamlit-container -f ./Dockerfile
