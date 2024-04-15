@@ -4,8 +4,7 @@ EXPOSE $PORT
 
 WORKDIR /app
 
-# Copy requirements.txt and check if it exists
-COPY requirements.txt /app/requirements.txt
+# check if requirements exist - if yes, install
 RUN test -f requirements.txt && pip install --upgrade pip && pip install -r requirements.txt || echo "No requirements.txt found, skipping installation"
 
 # Install Streamlit
