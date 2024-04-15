@@ -1,17 +1,21 @@
-FROM python:3.7.2-slim
+FROM python
 
 EXPOSE $PORT
 
 WORKDIR /app
 
-# check if requirements exist - if yes, install
-RUN test -f requirements.txt && pip install --upgrade pip && pip install -r requirements.txt || echo "No requirements.txt found, skipping installation"
+# Copy the script for installing requirements
+COPY installrequirements.sh /usr/local/bin/installrequirements.sh
+COPY app.py /app
+
+# Make the script executable
+RUN chmod +x /usr/local/bin/installrequirements.sh
 
 # Install Streamlit
 RUN pip install streamlit
 
-# Set the entrypoint to run Streamlit
-ENTRYPOINT ["streamlit", "run"]
+# Set the entrypoint to run the script
+ENTRYPOINT ["/usr/local/bin/installrequirements.sh"]
 
 # Use environment variables for the default port and Python file
-CMD ["--server.port", "$PORT", "$STREAMLIT_APP"]
+CMD streamlit run --server.port $PORT /app/app.py
