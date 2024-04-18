@@ -5,7 +5,7 @@ Containerised streamlit instances, for easy docker run deployment with port conf
 <b>Deploy:</b>
 
 
-<span style="padding-left: 10px;" width="90%">
+<span style="margin-left: 10px;" width="90%">
 Docker Run - 
 <span style="margin-left: 30pt; width: 80%">
    
