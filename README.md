@@ -5,6 +5,7 @@ Containerised streamlit instances, for easy docker run deployment with port conf
 <b>Deploy:</b>
 
 
+<span align="right" width="90%">
 Docker Run - 
 <span style="margin-left: 30pt; width: 80%">
    
@@ -18,7 +19,7 @@ docker run -d \
 <br>
 
 <b>Note:</b> modify the app.py in the /app directory with your app, but its important to keep the name "app.py"
-
+</span>
 
 
 
