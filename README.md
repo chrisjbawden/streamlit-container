@@ -8,11 +8,11 @@ Containerised streamlit instances, for easy docker run deployment with port conf
 Docker Run - 
    
 > docker run -d \
-   -p 80:80 \
-   -e PORT=80 \
-   --name streamlit \
-   -v /docker/streamlit-container/app:/app \
-   streamlit-container
+  >> -p 80:80 \
+  >> -e PORT=80 \
+  >> --name streamlit \
+  >> -v /docker/streamlit-container/app:/app \
+  >> streamlit-container
 
 <br>
 
