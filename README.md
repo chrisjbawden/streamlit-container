@@ -9,11 +9,11 @@ Docker Run -
 <span style="margin-left: 30pt; width: 80%">
    
 docker run -d \
-   &nbsp&nbsp&nbsp-p 80:80 \
-   &nbsp&nbsp&nbsp-e PORT=80 \
-   &nbsp&nbsp&nbsp--name streamlit \
-   &nbsp&nbsp&nbsp-v /docker/streamlit-container/app:/app \
-   &nbsp&nbsp&nbspstreamlit-container
+   -p 80:80 \
+   -e PORT=80 \
+   --name streamlit \
+   -v /docker/streamlit-container/app:/app \
+   streamlit-container
 </span>
 <br>
 
