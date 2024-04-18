@@ -5,21 +5,19 @@ Containerised streamlit instances, for easy docker run deployment with port conf
 <b>Deploy:</b>
 
 
-<span style="margin-left: 10px;" width="90%">
 Docker Run - 
 <span style="margin-left: 30pt; width: 80%">
    
 docker run -d \
-   -p 80:80 \
-   -e PORT=80 \
-   --name streamlit \
-   -v /docker/streamlit-container/app:/app \
-   streamlit-container
+   &nbsp&nbsp&nbsp-p 80:80 \
+   &nbsp&nbsp&nbsp-e PORT=80 \
+   &nbsp&nbsp&nbsp--name streamlit \
+   &nbsp&nbsp&nbsp-v /docker/streamlit-container/app:/app \
+   &nbsp&nbsp&nbspstreamlit-container
 </span>
 <br>
 
 <b>Note:</b> modify the app.py in the /app directory with your app, but its important to keep the name "app.py"
-</span>
 
 
 
