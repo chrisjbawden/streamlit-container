@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import shutil
+import time
 
 # Layout: two columns
 
@@ -24,7 +25,9 @@ with right:
                 with open(save_path, "wb") as f:
                     shutil.copyfileobj(uploaded_file, f)
                 #st.success(f"✅ App deployed successfully! This page will reload with the new app.")
-                st.rerun()
+                #st.rerun()
+                time.sleep(1)
+                st.markdown('<meta http-equiv="refresh" content="1">', unsafe_allow_html=True)
             except Exception as e:
                 st.error(f"❌ Failed to deploy: {e}")
         else:
