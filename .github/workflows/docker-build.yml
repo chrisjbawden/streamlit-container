@@ -1,0 +1,32 @@
+name: Build Docker Image
+
+on:
+  push:
+    paths:
+      - build/Dockerfile
+      - build/boot.sh
+      - build/_main_.py
+      - .github/workflows/docker-build.yml
+  schedule:
+    # Every Thursday at 10AM AEST (which is UTC+10 or UTC+11 depending on DST)
+    - cron: '0 0 * * 4'  # 10AM AEST = 00:00 UTC
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: chrisjbawden/streamlit-container:latest
