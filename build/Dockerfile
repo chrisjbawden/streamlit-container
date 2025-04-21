@@ -11,7 +11,7 @@ RUN apt update && apt install -y \
 
 # Copy application and boot script
 COPY build/boot.sh /opt/boot.sh
-COPY build/_main_template.py /opt/_main_template.py
+COPY build/_main_.py /opt/_main_.py
 
 # Make boot script executable
 RUN chmod +x /opt/boot.sh
