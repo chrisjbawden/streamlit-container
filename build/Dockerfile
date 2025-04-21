@@ -4,7 +4,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install Python, pip, Streamlit, cron, and other essentials
 RUN apt update && apt install -y python3 python3-pip cron curl
-RUN pip3 install --upgrade pip 
 RUN pip3 install streamlit --break-system-packages
 RUN mkdir -p /opt/streamlit
 
