@@ -38,7 +38,7 @@ fi
 # === Fallback _main_.py ===
 if [ ! -f _main_.py ]; then
     echo "[INFO] _main_.py not found. Copying template from /opt/_main_template.py..."
-    cp /opt/_main_template.py /opt/streamlit/_main_.py
+    cp /opt/_main_.py /opt/streamlit/_main_.py
 fi
 
 # === Start Streamlit ===
