@@ -7,21 +7,13 @@ Containerised streamlit instances, for easy docker run deployment with port conf
    
 &nbsp; docker run -d \
   &nbsp;&nbsp;&nbsp; -p 8501:8501 \
-  &nbsp;&nbsp;&nbsp; --name streamlit \
-  &nbsp;&nbsp;&nbsp; -v [directory]:/opt/streamlit \
+  &nbsp;&nbsp;&nbsp; --name [app name] \
+  &nbsp;&nbsp;&nbsp; -v [directory where you app files are]:/opt/streamlit \
   &nbsp;&nbsp;&nbsp; streamlit-container
 
 <br>
 
-<b>Note:</b> modify the app.py in the /app directory with your app, but its important to keep the name "app.py"
+<b>Note:</b> its important to keep the primary app file name "_main_.py" < --- this is what it look to launch with streamlit
 
 
 
-
-<br>
-<br>
-------
-
-<b>Development -</b>
-
-sudo docker build . -t streamlit-container -f ./Dockerfile
