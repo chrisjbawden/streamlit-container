@@ -13,7 +13,7 @@ Containerised streamlit instances, for easy docker run deployment with port conf
 
 <br>
 
-<b>Note:</b> its important to keep the primary app file name '\_main_'.py" < --- this is what it look for when launching streamlit
+<b>Note:</b> its important to keep the primary app file name '\_main\_'.py" < --- this is what it look for when launching streamlit
 
 
 
