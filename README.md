@@ -5,7 +5,7 @@ Containerised streamlit instances, for easy docker run deployment with port conf
 <b>Deploy:</b>
 
    
-&nbsp; docker run -d \ \
+docker run -d \ \
   &nbsp;&nbsp;&nbsp; -p 8501:8501 \ \
   &nbsp;&nbsp;&nbsp; --name [app name] \ \
   &nbsp;&nbsp;&nbsp; -v [directory where you app files are]:/opt/streamlit \ \
