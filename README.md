@@ -13,6 +13,10 @@ docker run -d \ \
 
 <br>
 
+Deployment:
+
+<br>
+
 <b>Note:</b> its important to keep the primary app file name '\_main\_'.py" < --- this is what it look for when launching streamlit
 
 
