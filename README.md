@@ -17,7 +17,7 @@ Deployment:
 
 <br>
 
-<b>Note:</b> its important to keep the primary app file name '\_main\_'.py" < --- this is what it look for when launching streamlit
+<b>Note:</b> The boot script will look for an "app.py" as the streamlit application in the directory you set.
 
 
 
