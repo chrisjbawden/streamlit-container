@@ -19,7 +19,7 @@ with right:
     st.markdown('<div style="height: 40px;"></div>', unsafe_allow_html=True)
     if st.button("🚀 Deploy", use_container_width=True):
         if uploaded_file:
-            save_path = "/opt/streamlit/_main_.py"
+            save_path = "/opt/streamlit/app.py"
             try:
                 # Save uploaded file to the target location
                 with open(save_path, "wb") as f:
