@@ -9,10 +9,10 @@ Example deployment command -
 <br>
 
 docker run -d \ <br>
-&nbsp;&nbsp;&nbsp; -p 8501:8501 \<br>
-&nbsp;&nbsp;&nbsp; --name [app name] \<br>
-&nbsp;&nbsp;&nbsp; -v [directory where you app files are]:/opt/streamlit \<br>
-&nbsp;&nbsp;&nbsp; chrisjbawden/streamlit-container \<br>
+&nbsp;&nbsp;&nbsp; -p 8501:8501 \ <br>
+&nbsp;&nbsp;&nbsp; --name [app name] \ <br>
+&nbsp;&nbsp;&nbsp; -v [directory where you app files are]:/opt/streamlit \ <br>
+&nbsp;&nbsp;&nbsp; chrisjbawden/streamlit-container \ <br>
 
 <br>
 <br>
