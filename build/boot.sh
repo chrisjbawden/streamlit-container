@@ -36,11 +36,11 @@ else
 fi
 
 # === Fallback _main_.py ===
-if [ ! -f _main_.py ]; then
+if [ ! -f app.py ]; then
     echo "[INFO] _main_.py not found. Copying template from /opt/_main_template.py..."
-    cp /opt/_main_.py /opt/streamlit/_main_.py
+    cp /opt/_template_.py /opt/streamlit/app.py
 fi
 
 # === Start Streamlit ===
 echo "[INFO] Launching Streamlit app..."
-exec streamlit run _main_.py --server.port=8501 --server.enableCORS=false
+exec streamlit run app.py --server.port=8501 --server.enableCORS=false
