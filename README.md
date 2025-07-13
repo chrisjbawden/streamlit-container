@@ -1,23 +1,24 @@
-<b>Description:</b>
-
-Containerised streamlit instances, for easy docker run deployment with port configurations. 
-
-<b>Deploy:</b>
-
-   
-docker run -d \ \
-  &nbsp;&nbsp;&nbsp; -p 8501:8501 \ \
-  &nbsp;&nbsp;&nbsp; --name [app name] \ \
-  &nbsp;&nbsp;&nbsp; -v [directory where you app files are]:/opt/streamlit \ \
-  &nbsp;&nbsp;&nbsp; chrisjbawden/streamlit-container
+Containerised streamlit instances that uses a boot.sh for easy management.
 
 <br>
-
-Deployment:
-
 <br>
 
-<b>Note:</b> The boot script will look for an "app.py" as the streamlit application in the directory you set.
+Example deployment command -
+
+<br>
+<br>
+
+docker run -d
+&nbsp;&nbsp;&nbsp; -p 8501:8501
+&nbsp;&nbsp;&nbsp; --name [app name]
+&nbsp;&nbsp;&nbsp; -v [directory where you app files are]:/opt/streamlit
+&nbsp;&nbsp;&nbsp; chrisjbawden/streamlit-container
+
+<br>
+<br>
+
+Note: modify the app.py in the /app directory with your own app - its important to keep the name "app.py" unless you modify the boot.sh
+
 
 
 
