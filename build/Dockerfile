@@ -9,7 +9,7 @@ RUN mkdir -p /opt/streamlit
 
 # Copy application and boot script
 COPY build/boot.sh /opt/boot.sh
-COPY build/_main_.py /opt/_main_.py
+COPY build/_template_.py /opt/_template_.py
 
 # Make boot script executable
 RUN chmod +x /opt/boot.sh
