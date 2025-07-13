@@ -10,6 +10,7 @@ on:
   schedule:
     # Every Thursday at 10AM AEST (which is UTC+10 or UTC+11 depending on DST)
     - cron: '0 0 * * 4'  # 10AM AEST = 00:00 UTC
+  workflow_dispatch:  # option to run manually
 
 jobs:
   build-and-push:
