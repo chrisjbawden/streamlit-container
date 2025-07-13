@@ -5,7 +5,7 @@ on:
     paths:
       - build/Dockerfile
       - build/boot.sh
-      - build/_main_.py
+      - build/_template_.py
       - .github/workflows/docker-build.yml
   schedule:
     # Every Thursday at 10AM AEST (which is UTC+10 or UTC+11 depending on DST)
