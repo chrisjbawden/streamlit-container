@@ -29,7 +29,8 @@ if [ -s pip-requirements.txt ]; then
         [[ -z "$package" || "$package" == \#* ]] && continue
 
         echo "[INFO] Installing: $package"
-        pip3 install "$package" || echo "[WARN] Failed to install: $package"
+        pip3 install --break-system-packages "$package" \
+            || echo "[WARN] Failed to install: $package"
     done < pip-requirements.txt
 else
     echo "[INFO] pip-requirements.txt not found or empty. Skipping pip install."
