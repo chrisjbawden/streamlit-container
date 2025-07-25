@@ -44,32 +44,28 @@ fi
 
 # === Run any startup scripts ===
 # 1. Ensure the startup directory exists
-if [ ! -d startup ]; then
+if [ ! -d /opt/streamlit/startup ]; then
     echo "[INFO] Creating startup directory..."
     mkdir startup
 fi
 
 # 2. Execute all .sh and .py files in startup
-for script in startup/*; do
- if [ -f "$script" ]; then
-     case "$script" in
-         *.sh)
--                echo "[INFO] Running startup script: $script"
--                bash "$script"
-+                echo "[INFO] Running startup script: $script (logs: startup/$(basename "$script").log)"
-+                bash "$script" > "startup/$(basename "$script").log" 2>&1 & 
-             ;;
-         *.py)
--                echo "[INFO] Running startup script in background: $script"
--                python3 "$script" &
-+                echo "[INFO] Running Python startup script: $script (logs: startup/$(basename "$script").log)"
-+                python3 "$script" > "startup/$(basename "$script").log" 2>&1 &
-             ;;
-         *)
-             echo "[INFO] Skipping non-shell/python file: $script"
-             ;;
-     esac
- fi
+for script in /opt/streamlit/startup/*; do
+    if [ -f "$script" ]; then
+        case "$script" in
+            *.sh)
+                echo "[INFO] Running startup script: $script (logs: startup/$(basename "$script").log)"
+                bash "$script" > "startup/$(basename "$script").log" 2>&1 &
+                ;;
+            *.py)
+                echo "[INFO] Running Python startup script: $script (logs: startup/$(basename "$script").log)"
+                python3 "$script" > "startup/$(basename "$script").log" 2>&1 &
+                ;;
+            *)
+                echo "[INFO] Skipping non-shell/python file: $script"
+                ;;
+        esac
+    fi
 done
 
 # === Start Streamlit ===
